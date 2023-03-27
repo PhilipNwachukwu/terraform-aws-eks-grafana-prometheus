@@ -28,10 +28,10 @@ variable "namespace_grafana" {
   description = "Kubernetes namespace to deploy Grafana stack Helm charts."
 }
 
-variable "mod_dependency" {
-  default     = module.eks
-  description = "Dependence variable binds all AWS resources allocated by this module, dependent modules reference this variable."
-}
+# variable "mod_dependency" {
+#   default     = module.eks
+#   description = "Dependence variable binds all AWS resources allocated by this module, dependent modules reference this variable."
+# }
 
 # Prometheus
 
