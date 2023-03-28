@@ -20,6 +20,10 @@ provider "aws" {
   region = "eu-west-2"
 }
 
+provider "kubernetes" {
+  load_config_file = false
+}
+
 
 #   required_providers {
 #     aws        = ">= 3.13"
