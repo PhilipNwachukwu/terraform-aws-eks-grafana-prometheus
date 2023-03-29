@@ -20,21 +20,12 @@ provider "aws" {
   region = "eu-west-2"
 }
 
-provider "kubernetes" {}
-
-data "aws_region" "current" {}
-
 data "aws_eks_cluster" "cluster" {
   name = module.eks.cluster_id
 }
 
 data "aws_eks_cluster_auth" "cluster" {
   name = module.eks.cluster_id
-}
-
-provider "aws" {
-  region = data.aws_region.current.id
-  alias  = "default" # this should match the named profile you used if at all
 }
 
 provider "kubernetes" {
