@@ -20,9 +20,7 @@ provider "aws" {
   region = "eu-west-2"
 }
 
-provider "kubernetes" {
-  load_config_file = false
-}
+provider "kubernetes" {}
 
 
 #   required_providers {
