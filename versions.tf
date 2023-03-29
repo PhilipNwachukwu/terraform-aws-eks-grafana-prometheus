@@ -20,6 +20,11 @@ provider "aws" {
   region = "eu-west-2"
 }
 
+provider "kubernetes" {
+  config_path    = "~/.kube/config"
+  config_context = "my-context"
+}
+
 
 # module "eks" {
 #   source  = "terraform-aws-modules/eks/aws"
