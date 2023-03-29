@@ -20,6 +20,12 @@ provider "aws" {
   region = "eu-west-2"
 }
 
+
+module "eks" {
+  source  = "terraform-aws-modules/eks/aws"
+  version = "19.11.0"
+}
+  
 data "aws_eks_cluster" "cluster" {
   name = module.eks.cluster_id
 }
